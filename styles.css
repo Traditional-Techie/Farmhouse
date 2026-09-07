@@ -140,6 +140,53 @@ h1, h2, h3, h4, h5, h6 {
     gap: 30px;
 }
 
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.lang-switch select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--text-dark);
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 7px 28px 7px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234a3622'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 14px;
+}
+
+.lang-switch select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(232, 153, 46, 0.15);
+}
+
+.lang-switch .fa-globe {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .lang-switch {
+        margin-top: 4px;
+    }
+    .lang-switch select {
+        width: 100%;
+    }
+}
+
 .nav-link {
     text-decoration: none;
     color: var(--text-dark);
