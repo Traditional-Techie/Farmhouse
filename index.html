@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Experience luxury farmhouse stays and events in Hyderabad. Book your perfect getaway with swimming pool, garden, BBQ area and more.">
+    <meta name="keywords" content="farmhouse, farmhouse hyderabad, farmhouse booking, events, celebrations, stay, retreat">
+    <meta name="theme-color" content="#7a3d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="FarmHouse">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta property="og:title" content="FarmHouse - Premium Stays & Events">
+    <meta property="og:description" content="Experience luxury in nature. Book farmhouse stays and plan your celebrations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.farmhouse.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon-precomposed" href="icons/icon-192x192.png">
+    <title>FarmHouse - Premium Farmhouse Stays & Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+                <span>FarmHouse</span>
+            </div>
+            <nav class="nav">
+                <a href="#book-stay" class="nav-link active" data-tab="book-stay">Book a Stay</a>
+                <a href="#events" class="nav-link" data-tab="events">Events & Celebrations</a>
+            </nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-blob blob-1"></div>
+        <div class="hero-blob blob-2"></div>
+        <div class="hero-blob blob-3"></div>
+        <div class="field-layer">
+            <div class="sun-glow"></div>
+            <div class="hill hill-1"></div>
+            <div class="hill hill-2"></div>
+            <div class="hill hill-3"></div>
+            <div class="field-strip"></div>
+            <span class="cow cow-1">&#128004;</span>
+            <span class="cow cow-2">&#128004;</span>
+            <span class="cow cow-3">&#128004;</span>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-leaf"></i> A Farmhouse in the Heart of Nature</span>
+            <h1 class="gradient-animate">Wake Up to <span class="highlight">Sunrise</span> &amp; Pure Country Air</h1>
+            <p>Escape the city to our rustic farmhouse — green fields, farm animals, bonfires under starry skies</p>
+            <div class="hero-tags">
+                <span><i class="fas fa-star"></i> 4.5 Rated</span>
+                <span><i class="fas fa-paw"></i> Farm Animals</span>
+                <span><i class="fas fa-tree"></i> Green Fields</span>
+                <span><i class="fas fa-fire"></i> Bonfire Nights</span>
+            </div>
+            <div class="hero-pricing">
+                <div class="price-card glass-card tilt-card">
+                    <span class="price-label">Weekend (Sat-Sun)</span>
+                    <span class="price price-grad">₹6,500</span>
+                    <span class="price-sub">Starts per night</span>
+                    <button class="btn btn-glow btn-sm btn-hero" data-tab-jump="book-stay">Book Now</button>
+                </div>
+                <div class="price-card glass-card tilt-card">
+                    <span class="price-label">Normal Days</span>
+                    <span class="price price-grad">₹5,500</span>
+                    <span class="price-sub">Starts per night</span>
+                    <button class="btn btn-glow btn-sm btn-hero" data-tab-jump="book-stay">Book Now</button>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span><i class="fas fa-music"></i> DJ Nights</span>
+            <span><i class="fas fa-swimming-pool"></i> Pool Parties</span>
+            <span><i class="fas fa-camera-retro"></i> Photoshoot Zones</span>
+            <span><i class="fas fa-fire"></i> Bonfire & BBQ</span>
+            <span><i class="fas fa-wifi"></i> High-Speed WiFi</span>
+            <span><i class="fas fa-cocktail"></i> Events & Celebrations</span>
+            <span><i class="fas fa-music"></i> DJ Nights</span>
+            <span><i class="fas fa-swimming-pool"></i> Pool Parties</span>
+            <span><i class="fas fa-camera-retro"></i> Photoshoot Zones</span>
+            <span><i class="fas fa-fire"></i> Bonfire & BBQ</span>
+            <span><i class="fas fa-wifi"></i> High-Speed WiFi</span>
+            <span><i class="fas fa-cocktail"></i> Events & Celebrations</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Book a Stay Section -->
+            <section id="book-stay" class="section active">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow"><i class="fas fa-bed"></i> Find your vibe</span>
+                    <h2>Book a Stay</h2>
+                    <p>Fill in your details to book your perfect farmhouse experience</p>
+                </div>
+
+                <div class="stay-content">
+                    <!-- Farmhouse Info -->
+                    <div class="farmhouse-info">
+                        <!-- Photo & Video Gallery -->
+                        <div class="gallery-card reveal">
+                            <div class="gallery-main">
+                                <div class="gallery-slides">
+                                    <div class="slide active">
+                                        <img src="images/exterior.jpg" alt="Farmhouse exterior view">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="images/pool.jpg" alt="Swimming pool">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="images/garden.jpg" alt="Green garden">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="images/bedroom.jpg" alt="Master bedroom">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="images/living.jpg" alt="Living room">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="images/bbq.jpg" alt="BBQ and fire pit area">
+                                    </div>
+                                    <div class="slide">
+                                        <img src="images/kitchen.jpg" alt="Farmhouse kitchen">
+                                    </div>
+                                    <div class="slide video-slide">
+                                        <video id="galleryVideo" controls preload="none" poster="images/exterior.jpg">
+                                            <source src="video/farmhouse-tour.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <span class="video-ready-label">Add video/farmhouse-tour.mp4 to play your farmhouse tour</span>
+                                    </div>
+                                </div>
+                                <button class="gallery-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+                                <button class="gallery-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+                                <div class="gallery-counter">1 / 8</div>
+                                <button class="gallery-badge lightbox-trigger"><i class="fas fa-expand"></i> Photos & Video</button>
+                            </div>
+                            <div class="gallery-thumbs">
+                                <div class="thumb active" data-index="0"><img src="images/exterior.jpg" alt="Thumbnail"><span class="thumb-caption"><i class="fas fa-home"></i></span></div>
+                                <div class="thumb" data-index="1"><img src="images/pool.jpg" alt="Thumbnail"><span class="thumb-caption"><i class="fas fa-swimming-pool"></i></span></div>
+                                <div class="thumb" data-index="2"><img src="images/garden.jpg" alt="Thumbnail"><span class="thumb-caption"><i class="fas fa-tree"></i></span></div>
+                                <div class="thumb" data-index="3"><img src="images/bedroom.jpg" alt="Thumbnail"><span class="thumb-caption"><i class="fas fa-bed"></i></span></div>
+                                <div class="thumb" data-index="4"><img src="images/living.jpg" alt="Thumbnail"><span class="thumb-caption"><i class="fas fa-couch"></i></span></div>
+                                <div class="thumb" data-index="5"><img src="images/bbq.jpg" alt="Thumbnail"><span class="thumb-caption"><i class="fas fa-fire"></i></span></div>
+                                <div class="thumb" data-index="6"><img src="images/kitchen.jpg" alt="Thumbnail"><span class="thumb-caption"><i class="fas fa-utensils"></i></span></div>
+                                <div class="thumb video-thumb" data-index="7"><img src="images/exterior.jpg" alt="Video"><span class="thumb-caption"><i class="fas fa-play"></i></span></div>
+                            </div>
+                        </div>
+
+                        <!-- About this stay -->
+                        <div class="about-stay reveal">
+                            <h3>About this stay</h3>
+
+                            <!-- Our Location (display only) -->
+                            <div class="stay-location">
+                                <div class="location-marker">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="location-details">
+                                    <span class="location-label">Our Location</span>
+                                    <span class="location-name">Serenity Farmhouse</span>
+                                    <span class="location-address"><i class="fas fa-map-pin"></i> Shamirpet, Hyderabad - 500078</span>
+                                </div>
+                                <a class="btn btn-outline btn-sm location-cta" href="https://www.google.com/maps/search/?api=1&query=Shamirpet+Hyderabad" target="_blank" rel="noopener">
+                                    <i class="fas fa-directions"></i> Get Directions
+                                </a>
+                            </div>
+
+                            <div class="stay-specs">
+                                <div class="spec"><i class="fas fa-users"></i> Up to 30 guests</div>
+                                <div class="spec"><i class="fas fa-bed"></i> 4 bedrooms</div>
+                                <div class="spec"><i class="fas fa-bath"></i> 4 bathrooms</div>
+                                <div class="spec"><i class="fas fa-ruler-combined"></i> 2 acres</div>
+                                <div class="spec"><i class="fas fa-water"></i> Private pool</div>
+                                <div class="spec"><i class="fas fa-concierge-bell"></i> House chef</div>
+                            </div>
+                            <p class="about-text">
+                                Nestled amidst 2 acres of lush greenery in Shamirpet, our farmhouse offers the perfect
+                                blend of rustic charm and modern luxury. Soak in the private swimming pool, gather around
+                                the bonfire under the stars, and enjoy a farm-to-table dining experience prepared by our
+                                in-house chef.
+                            </p>
+                            <div class="stay-status">
+                                <div class="status-tabs">
+                                    <button class="status-tab active" data-status="available"><i class="fas fa-check-circle"></i> Available</button>
+                                    <button class="status-tab" data-status="booked"><i class="fas fa-times-circle"></i> Booked</button>
+                                    <button class="status-tab" data-status="offer"><i class="fas fa-tag"></i> Offer</button>
+                                    <button class="status-tab" data-status="selected"><i class="fas fa-calendar-check"></i> Selected</button>
+                                </div>
+                            </div>
+                            <div class="availability-calendar" id="availabilityCalendar">
+                                <!-- Calendar built by JS -->
+                            </div>
+                            <div class="calendar-legend">
+                                <span><i class="legend-dot dot-available"></i> Available</span>
+                                <span><i class="legend-dot dot-booked"></i> Booked</span>
+                                <span><i class="legend-dot dot-offer"></i> Offer</span>
+                                <span><i class="legend-dot dot-selected"></i> Selected</span>
+                            </div>
+                        </div>
+
+                        <!-- Ratings & Reviews -->
+                        <div class="reviews-section reveal">
+                            <div class="reviews-header">
+                                <h3>Ratings & Reviews</h3>
+                                <a href="#" class="see-all-link">See all 128 reviews <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="rating-summary">
+                                <div class="rating-score">
+                                    <span class="big-score">4.5</span>
+                                    <span class="score-out">/ 5</span>
+                                    <div class="stars stars-large">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="score-reviews">Based on 128 verified stays</span>
+                                </div>
+                                <div class="rating-bars">
+                                    <div class="bar-row">
+                                        <span>Cleanliness</span>
+                                        <div class="bar-track"><div class="bar-fill" style="width: 95%"></div></div>
+                                        <span class="bar-value">4.9</span>
+                                    </div>
+                                    <div class="bar-row">
+                                        <span>Location</span>
+                                        <div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+                                        <span class="bar-value">4.6</span>
+                                    </div>
+                                    <div class="bar-row">
+                                        <span>Communication</span>
+                                        <div class="bar-track"><div class="bar-fill" style="width: 86%"></div></div>
+                                        <span class="bar-value">4.4</span>
+                                    </div>
+                                    <div class="bar-row">
+                                        <span>Value for money</span>
+                                        <div class="bar-track"><div class="bar-fill" style="width: 83%"></div></div>
+                                        <span class="bar-value">4.3</span>
+                                    </div>
+                                    <div class="bar-row">
+                                        <span>Services</span>
+                                        <div class="bar-track"><div class="bar-fill" style="width: 87%"></div></div>
+                                        <span class="bar-value">4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-cards">
+                                <div class="review-card">
+                                    <div class="review-avatar">RS</div>
+                                    <div class="review-body">
+                                        <div class="review-top">
+                                            <span class="reviewer-name">Rahul Sharma</span>
+                                            <span class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        </div>
+                                        <span class="review-date"><i class="fas fa-calendar-alt"></i> June 2026</span>
+                                        <p>Amazing place for a family getaway! The pool is clean and the staff took great care of us. Kids absolutely loved the garden.</p>
+                                        <div class="review-tags"><span>Family stay</span><span>Pool</span></div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    <div class="review-avatar">AP</div>
+                                    <div class="review-body">
+                                        <div class="review-top">
+                                            <span class="reviewer-name">Ananya Pillai</span>
+                                            <span class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                                        </div>
+                                        <span class="review-date"><i class="fas fa-calendar-alt"></i> May 2026</span>
+                                        <p>Perfect venue for our corporate offsite. Great ambiance, delicious food and smooth check-in process. Highly recommended!</p>
+                                        <div class="review-tags"><span>Corporate</span><span>Events</span></div>
+                                    </div>
+                                </div>
+                                <div class="review-card">
+                                    <div class="review-avatar">KM</div>
+                                    <div class="review-body">
+                                        <div class="review-top">
+                                            <span class="reviewer-name">Kiran Kumar</span>
+                                            <span class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        </div>
+                                        <span class="review-date"><i class="fas fa-calendar-alt"></i> April 2026</span>
+                                        <p>We hosted a pre-wedding photoshoot here. The exteriors are stunning and made for beautiful pictures. The team was very supportive.</p>
+                                        <div class="review-tags"><span>Wedding</span><span>Photoshoot</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline btn-block" id="loadMoreReviews"><i class="fas fa-comments"></i> Load more reviews</button>
+                        </div>
+                    </div>
+
+                    <!-- Stay Enquiry Form -->
+                    <div class="enquiry-form-container">
+                        <div class="form-card reveal">
+                            <h3>Stay Enquiry</h3>
+                            <form id="stayForm">
+                                <div class="form-group">
+                                    <label>Full Name <span class="required">*</span></label>
+                                    <input type="text" name="fullName" placeholder="Enter your full name" required>
+                                    <span class="error-message">Full name is required</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phone Number <span class="required">*</span></label>
+                                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                                    <span class="error-message">Enter a valid phone number</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email <span class="required">*</span></label>
+                                    <input type="email" name="email" placeholder="Enter your email" required>
+                                    <span class="error-message">Enter a valid email</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Expected Guests <span class="required">*</span></label>
+                                    <div class="select-wrapper">
+                                        <select name="guests" required>
+                                            <option value="">Select Guests</option>
+                                            <option value="1-2">1-2 Guests</option>
+                                            <option value="2-4">2-4 Guests</option>
+                                            <option value="4-6">4-6 Guests</option>
+                                            <option value="6-8">6-8 Guests</option>
+                                            <option value="8-10">8-10 Guests</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Attach Aadhar Proof <span class="required">*</span></label>
+                                    <div class="file-upload">
+                                        <input type="file" name="aadhar" id="aadharStay" accept=".jpg,.jpeg,.png,.pdf" required>
+                                        <div class="file-upload-label">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            <span class="file-upload-text">Click to upload Aadhar card</span>
+                                            <small>JPG, PNG or PDF - Max 5MB</small>
+                                        </div>
+                                    </div>
+                                    <span class="error-message">Please attach your Aadhar card proof</span>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Check-in Date <span class="required">*</span></label>
+                                        <div class="date-input">
+                                            <input type="date" name="checkin" required>
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Check-out Date <span class="required">*</span></label>
+                                        <div class="date-input">
+                                            <input type="date" name="checkout" required>
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Check-in Time <span class="required">*</span></label>
+                                    <div class="date-input time-input">
+                                        <input type="time" name="checkinTime" required>
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Check-out Time <span class="required">*</span></label>
+                                    <div class="date-input time-input">
+                                        <input type="time" name="checkoutTime" required>
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Available Time Slots</label>
+                                    <div class="time-slots">
+                                        <label class="time-slot">
+                                            <input type="radio" name="timeSlot" value="morning">
+                                            <span class="slot-label">
+                                                <i class="fas fa-sun"></i>
+                                                Morning (9 AM - 12 PM)
+                                            </span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="timeSlot" value="afternoon">
+                                            <span class="slot-label">
+                                                <i class="fas fa-cloud-sun"></i>
+                                                Afternoon (12 PM - 4 PM)
+                                            </span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="timeSlot" value="evening">
+                                            <span class="slot-label">
+                                                <i class="fas fa-moon"></i>
+                                                Evening (4 PM - 8 PM)
+                                            </span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="timeSlot" value="night">
+                                            <span class="slot-label">
+                                                <i class="fas fa-star"></i>
+                                                Night Stay (8 PM - 8 AM)
+                                            </span>
+                                        </label>
+                                        <label class="time-slot">
+                                            <input type="radio" name="timeSlot" value="fullday">
+                                            <span class="slot-label">
+                                                <i class="fas fa-sun"></i>
+                                                Full Day (11 AM - 11 AM next day)
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <i class="fas fa-paper-plane"></i> Submit Enquiry
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Amenities -->
+                        <div class="amenities reveal">
+                            <div class="amenities-header">
+                                <h4>Amenities</h4>
+                                <span class="amenities-count">+12 facilities</span>
+                            </div>
+                            <div class="amenities-grid">
+                                <div class="amenity-item">
+                                    <i class="fas fa-swimming-pool"></i>
+                                    <span>Swimming Pool</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>House Kitchen</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-fire"></i>
+                                    <span>BBQ Area</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-tree"></i>
+                                    <span>Lawn Garden</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-wifi"></i>
+                                    <span>Free WiFi</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-car"></i>
+                                    <span>Free Parking</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-snowflake"></i>
+                                    <span>AC Rooms</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-tv"></i>
+                                    <span>Smart TV</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-generator"></i>
+                                    <span>Power Backup</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-child"></i>
+                                    <span>Kids Play Area</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-first-aid"></i>
+                                    <span>First Aid Kit</span>
+                                </div>
+                                <div class="amenity-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>24/7 Security</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cancellation Policy -->
+                        <div class="cancellation-policy">
+                            <h4>Cancellation Policy</h4>
+                            <p class="policy-note">No cancellation or refund is allowed due to the short notice period.</p>
+                            <div class="policy-timeline">
+                                <div class="policy-item refund">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>
+                                        <span class="policy-title">100% Refund</span>
+                                        <span class="policy-desc">Before 15 days</span>
+                                    </div>
+                                </div>
+                                <div class="policy-item no-refund">
+                                    <i class="fas fa-times-circle"></i>
+                                    <div>
+                                        <span class="policy-title">No Refund</span>
+                                        <span class="policy-desc">Less than 15 days</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Advantage -->
+                        <div class="location-advantage reveal">
+                            <h4>Location Advantage</h4>
+                            <ul>
+                                <li><i class="fas fa-clock"></i> 30 mins from city center</li>
+                                <li><i class="fas fa-hospital"></i> 10 mins to nearest hospital</li>
+                                <li><i class="fas fa-shopping-bag"></i> 15 mins to shopping mall</li>
+                                <li><i class="fas fa-gas-pump"></i> 2 mins to nearest fuel station</li>
+                            </ul>
+                        </div>
+
+                        <!-- Extra Charges -->
+                        <div class="cancellation-policy extra-charges reveal">
+                            <h4>Extra Charges (if used)</h4>
+                            <div class="extra-list">
+                                <div class="extra-row"><span>Extra guest (above 10)</span><strong>₹500</strong><span class="extra-unit">/person</span></div>
+                                <div class="extra-row"><span>Extra hour</span><strong>₹1,000</strong><span class="extra-unit">/hour</span></div>
+                                <div class="extra-row"><span>Extra room (stay-back)</span><strong>₹1,500</strong><span class="extra-unit">/room</span></div>
+                                <div class="extra-row"><span>BBQ setup &amp; charcoal</span><strong>₹2,000</strong><span class="extra-unit">/session</span></div>
+                                <div class="extra-row"><span>Pool cleaning (extra)</span><strong>₹800</strong><span class="extra-unit">/use</span></div>
+                                <div class="extra-row"><span>Decor / photo setup</span><strong>₹3,000</strong><span class="extra-unit">/setup</span></div>
+                            </div>
+                            <p class="extra-note">Final amount depends on actual usage. Confirm with our team before your event.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events & Celebrations Section -->
+            <section id="events" class="section">
+                <div class="section-header reveal">
+                    <span class="section-eyebrow"><i class="fas fa-champagne-glasses"></i> Let's party</span>
+                    <h2>Events & Celebrations</h2>
+                    <p>Tell us about your event and we'll create the perfect experience</p>
+                </div>
+
+                <div class="events-content">
+                    <!-- Menu Preview -->
+                    <div class="menu-section reveal">
+                        <h3>Menu</h3>
+                        <div class="menu-preview">
+                            <div class="menu-grid">
+                                <div class="menu-item-img"><img src="images/kitchen.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-utensils"></i> Starters</span></div>
+                                <div class="menu-item-img"><img src="images/bbq.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-drumstick-bite"></i> Main Course</span></div>
+                                <div class="menu-item-img"><img src="images/garden.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-ice-cream"></i> Desserts</span></div>
+                                <div class="menu-item-img menu-video-tile">
+                                    <video controls preload="none" poster="images/kitchen.jpg">
+                                        <source src="video/menu-tour.mp4" type="video/mp4">
+                                    </video>
+                                    <span class="menu-item-label"><i class="fas fa-play"></i> Menu Video</span>
+                                </div>
+                            </div>
+                            <div class="menu-note">
+                                <i class="fas fa-info-circle"></i>
+                                Full menu images will be available soon. Contact us on WhatsApp for the complete menu.
+                            </div>
+                        </div>
+
+                        <h4>Budget-Friendly Options</h4>
+                        <div class="budget-options">
+                            <div class="budget-card">
+                                <div class="budget-image">
+                                    <img src="images/garden.jpg" alt="Veg package">
+                                </div>
+                                <div class="budget-icon"><i class="fas fa-leaf"></i></div>
+                                <h5>Veg Package</h5>
+                                <ul class="budget-features">
+                                    <li><i class="fas fa-check"></i> Pure vegetarian spread</li>
+                                    <li><i class="fas fa-check"></i> Regional delicacies</li>
+                                    <li><i class="fas fa-check"></i> Unlimited beverages</li>
+                                </ul>
+                                <span class="budget-price"><strong>₹350</strong>/person</span>
+                                <button class="btn btn-sm btn-outline budget-select" data-package="Veg">Select Package</button>
+                            </div>
+                            <div class="budget-card popular">
+                                <div class="budget-image">
+                                    <img src="images/bbq.jpg" alt="Non-veg package">
+                                </div>
+                                <div class="budget-icon"><i class="fas fa-drumstick-bite"></i></div>
+                                <span class="popular-badge">Most Popular</span>
+                                <h5>Non-Veg Package</h5>
+                                <ul class="budget-features">
+                                    <li><i class="fas fa-check"></i> Authentic Hyderabadi feast</li>
+                                    <li><i class="fas fa-check"></i> BBQ & grill counter</li>
+                                    <li><i class="fas fa-check"></i> Live dessert station</li>
+                                </ul>
+                                <span class="budget-price"><strong>₹500</strong>/person</span>
+                                <button class="btn btn-sm btn-outline budget-select" data-package="Non-Veg">Select Package</button>
+                            </div>
+                            <div class="budget-card">
+                                <div class="budget-image">
+                                    <img src="images/kitchen.jpg" alt="Premium package">
+                                </div>
+                                <div class="budget-icon"><i class="fas fa-concierge-bell"></i></div>
+                                <h5>Premium Package</h5>
+                                <ul class="budget-features">
+                                    <li><i class="fas fa-check"></i> Multi-cuisine spread</li>
+                                    <li><i class="fas fa-check"></i> Live cooking counters</li>
+                                    <li><i class="fas fa-check"></i> Personalized service</li>
+                                </ul>
+                                <span class="budget-price"><strong>₹800</strong>/person</span>
+                                <button class="btn btn-sm btn-outline budget-select" data-package="Premium">Select Package</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Events Form -->
+                    <div class="events-form-container">
+                        <div class="form-card reveal">
+                            <h3>Tell Us About Your Event</h3>
+                            <div class="selected-package" id="selectedPackage" style="display:none">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="selectedPackageName"></span>
+                                <button type="button" class="selected-package-clear" id="clearSelectedPackage" aria-label="Clear selection"><i class="fas fa-times"></i></button>
+                            </div>
+                            <form id="eventsForm">
+                                <input type="hidden" name="package" id="packageField" value="">
+                                <div class="form-group">
+                                    <label>Event Type <span class="required">*</span></label>
+                                    <p class="select-hint">Select all that apply <span class="count">(0/4)</span></p>
+                                    <div class="event-types">
+                                        <label class="event-checkbox">
+                                            <input type="checkbox" name="eventType" value="wedding">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-label">Wedding/Pre-wedding</span>
+                                        </label>
+                                        <label class="event-checkbox">
+                                            <input type="checkbox" name="eventType" value="corporate">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-label">Corporate Retreat / Offsite</span>
+                                        </label>
+                                        <label class="event-checkbox">
+                                            <input type="checkbox" name="eventType" value="spiritual">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-label">Spiritual or Cultural Gathering</span>
+                                        </label>
+                                        <label class="event-checkbox">
+                                            <input type="checkbox" name="eventType" value="private">
+                                            <span class="checkbox-custom"></span>
+                                            <span class="checkbox-label">Private Celebration</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Full Name <span class="required">*</span></label>
+                                    <input type="text" name="fullName" placeholder="Enter your full name" required>
+                                    <span class="error-message">Full name is required</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phone Number <span class="required">*</span></label>
+                                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                                    <span class="error-message">Enter a valid phone number</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email <span class="required">*</span></label>
+                                    <input type="email" name="email" placeholder="Enter your email" required>
+                                    <span class="error-message">Enter a valid email</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Expected Guests <span class="required">*</span></label>
+                                    <div class="select-wrapper">
+                                        <select name="guests" required>
+                                            <option value="">Select Guests</option>
+                                            <option value="1-2">1-2 Guests</option>
+                                            <option value="2-4">2-4 Guests</option>
+                                            <option value="4-6">4-6 Guests</option>
+                                            <option value="6-8">6-8 Guests</option>
+                                            <option value="8-10">8-10 Guests</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Stay-back Rooms Required <span class="required">*</span></label>
+                                    <div class="select-wrapper">
+                                        <select name="rooms" required>
+                                            <option value="">Choose accommodation</option>
+                                            <option value="none">No rooms needed</option>
+                                            <option value="1-2">1-2 Rooms</option>
+                                            <option value="3-5">3-5 Rooms</option>
+                                            <option value="6-10">6-10 Rooms</option>
+                                            <option value="10+">10+ Rooms</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Attach Aadhar Proof <span class="required">*</span></label>
+                                    <div class="file-upload">
+                                        <input type="file" name="aadhar" id="aadharEvents" accept=".jpg,.jpeg,.png,.pdf" required>
+                                        <div class="file-upload-label">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            <span class="file-upload-text">Click to upload Aadhar card</span>
+                                            <small>JPG, PNG or PDF - Max 5MB</small>
+                                        </div>
+                                    </div>
+                                    <span class="error-message">Please attach your Aadhar card proof</span>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Check-in Date <span class="required">*</span></label>
+                                        <div class="date-input">
+                                            <input type="date" name="checkin" required>
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Check-out Date <span class="required">*</span></label>
+                                        <div class="date-input">
+                                            <input type="date" name="checkout" required>
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <i class="fas fa-search"></i> Find my Perfect Experience
+                                </button>
+                                <p class="form-note">Our team will get in touch with you within 24 hours</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210?text=Hi%20Sanjana%2C%20I%20would%20like%20to%20book%20a%20stay%20at%20the%20Farmhouse." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp with Sanjana Thirandasu">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+        <div class="container">
+            <div class="qr-content reveal">
+                <h3>Download Our App</h3>
+                <p>Scan the QR code to download the app</p>
+                <div class="qr-code">
+                    <div class="qr-placeholder">
+                        <i class="fas fa-qrcode"></i>
+                        <span>QR Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-body">
+            <img id="lightboxImage" src="" alt="Farmhouse preview">
+            <video id="lightboxVideo" controls style="display:none"></video>
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Enquiry Sent!</h3>
+            <p>Thank you for choosing DestinMe. Our travel experts will get in touch with you shortly.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-home"></i>
+                        <span>FarmHouse</span>
+                    </div>
+                    <p>Experience luxury in nature</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#book-stay" class="nav-link-footer" data-tab="book-stay">Book a Stay</a>
+                    <a href="#events" class="nav-link-footer" data-tab="events">Events</a>
+                    <a href="#footer-contact" id="contactUsLink">Contact Us</a>
+                </div>
+                <div class="footer-contact" id="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fab fa-whatsapp"></i> Hitesh Sevlani</p>
+                    <p><i class="fas fa-user-tie"></i> Sanjana Thirandasu</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@farmhouse.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FarmHouse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

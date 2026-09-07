@@ -1,0 +1,28 @@
+{
+  "name": "farmhouse-webapp",
+  "version": "1.0.0",
+  "description": "Premium Farmhouse Stays & Events Web Application",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "dev": "live-server --port=3000",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": [
+    "farmhouse",
+    "stays",
+    "events",
+    "bookings",
+    "hyderabad"
+  ],
+  "author": "FarmHouse Team",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
