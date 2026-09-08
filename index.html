@@ -38,8 +38,18 @@
                 <span>FarmHouse</span>
             </div>
             <nav class="nav">
-                <a href="#book-stay" class="nav-link active" data-tab="book-stay">Book a Stay</a>
-                <a href="#events" class="nav-link" data-tab="events">Events & Celebrations</a>
+                <a href="#book-stay" class="nav-link active" data-tab="book-stay" data-i18n="nav.stay">Book a Stay</a>
+                <a href="#events" class="nav-link" data-tab="events" data-i18n="nav.events">Events &amp; Celebrations</a>
+                <div class="lang-switch">
+                    <i class="fas fa-globe"></i>
+                    <select id="langSelector" aria-label="Language">
+                        <option value="en">English</option>
+                        <option value="te">తెలుగు</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="kn">ಕನ್ನಡ</option>
+                    </select>
+                </div>
             </nav>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -64,31 +74,31 @@
             <span class="cow cow-3">&#128004;</span>
         </div>
         <div class="hero-content">
-            <span class="hero-badge"><i class="fas fa-leaf"></i> A Farmhouse in the Heart of Nature</span>
-            <h1 class="gradient-animate">Wake Up to <span class="highlight">Sunrise</span> &amp; Pure Country Air</h1>
-            <p>Escape the city to our rustic farmhouse — green fields, farm animals, bonfires under starry skies</p>
+            <span class="hero-badge"><i class="fas fa-leaf"></i> <span data-i18n="hero.badge">A Farmhouse in the Heart of Nature</span></span>
+            <h1 class="gradient-animate" data-i18n-html="hero.h1">Wake Up to <span class="highlight">Sunrise</span> &amp; Pure Country Air</h1>
+            <p data-i18n="hero.sub">Escape the city to our rustic farmhouse — green fields, farm animals, bonfires under starry skies</p>
             <div class="hero-tags">
-                <span><i class="fas fa-star"></i> 4.5 Rated</span>
-                <span><i class="fas fa-paw"></i> Farm Animals</span>
-                <span><i class="fas fa-tree"></i> Green Fields</span>
-                <span><i class="fas fa-fire"></i> Bonfire Nights</span>
+                <span><i class="fas fa-star"></i> <span data-i18n="hero.tag.rated">4.5 Rated</span></span>
+                <span><i class="fas fa-paw"></i> <span data-i18n="hero.tag.animals">Farm Animals</span></span>
+                <span><i class="fas fa-tree"></i> <span data-i18n="hero.tag.fields">Green Fields</span></span>
+                <span><i class="fas fa-fire"></i> <span data-i18n="hero.tag.bonfire">Bonfire Nights</span></span>
             </div>
             <div class="hero-pricing">
                 <div class="price-card glass-card tilt-card">
-                    <span class="price-label">Weekend (Sat-Sun)</span>
+                    <span class="price-label" data-i18n="price.weekend">Weekend (Sat-Sun)</span>
                     <span class="price price-grad">₹6,500</span>
-                    <span class="price-sub">Starts per night</span>
-                    <button class="btn btn-glow btn-sm btn-hero" data-tab-jump="book-stay">Book Now</button>
+                    <span class="price-sub" data-i18n="price.night">Starts per night</span>
+                    <button class="btn btn-glow btn-sm btn-hero" data-tab-jump="book-stay" data-i18n="hero.book">Book Now</button>
                 </div>
                 <div class="price-card glass-card tilt-card">
-                    <span class="price-label">Normal Days</span>
+                    <span class="price-label" data-i18n="price.normal">Normal Days</span>
                     <span class="price price-grad">₹5,500</span>
-                    <span class="price-sub">Starts per night</span>
-                    <button class="btn btn-glow btn-sm btn-hero" data-tab-jump="book-stay">Book Now</button>
+                    <span class="price-sub" data-i18n="price.night">Starts per night</span>
+                    <button class="btn btn-glow btn-sm btn-hero" data-tab-jump="book-stay" data-i18n="hero.book">Book Now</button>
                 </div>
             </div>
             <div class="scroll-hint">
-                <span>Scroll to explore</span>
+                <span data-i18n="hero.scroll">Scroll to explore</span>
                 <i class="fas fa-chevron-down bounce"></i>
             </div>
         </div>
@@ -97,18 +107,18 @@
     <!-- Trending Marquee -->
     <div class="marquee">
         <div class="marquee-track">
-            <span><i class="fas fa-music"></i> DJ Nights</span>
-            <span><i class="fas fa-swimming-pool"></i> Pool Parties</span>
-            <span><i class="fas fa-camera-retro"></i> Photoshoot Zones</span>
-            <span><i class="fas fa-fire"></i> Bonfire & BBQ</span>
-            <span><i class="fas fa-wifi"></i> High-Speed WiFi</span>
-            <span><i class="fas fa-cocktail"></i> Events & Celebrations</span>
-            <span><i class="fas fa-music"></i> DJ Nights</span>
-            <span><i class="fas fa-swimming-pool"></i> Pool Parties</span>
-            <span><i class="fas fa-camera-retro"></i> Photoshoot Zones</span>
-            <span><i class="fas fa-fire"></i> Bonfire & BBQ</span>
-            <span><i class="fas fa-wifi"></i> High-Speed WiFi</span>
-            <span><i class="fas fa-cocktail"></i> Events & Celebrations</span>
+            <span><i class="fas fa-music"></i> <span data-i18n="mq.dj">DJ Nights</span></span>
+            <span><i class="fas fa-swimming-pool"></i> <span data-i18n="mq.pool">Pool Parties</span></span>
+            <span><i class="fas fa-camera-retro"></i> <span data-i18n="mq.photo">Photoshoot Zones</span></span>
+            <span><i class="fas fa-fire"></i> <span data-i18n="mq.bbq">Bonfire &amp; BBQ</span></span>
+            <span><i class="fas fa-wifi"></i> <span data-i18n="mq.wifi">High-Speed WiFi</span></span>
+            <span><i class="fas fa-cocktail"></i> <span data-i18n="mq.events">Events &amp; Celebrations</span></span>
+            <span><i class="fas fa-music"></i> <span data-i18n="mq.dj">DJ Nights</span></span>
+            <span><i class="fas fa-swimming-pool"></i> <span data-i18n="mq.pool">Pool Parties</span></span>
+            <span><i class="fas fa-camera-retro"></i> <span data-i18n="mq.photo">Photoshoot Zones</span></span>
+            <span><i class="fas fa-fire"></i> <span data-i18n="mq.bbq">Bonfire &amp; BBQ</span></span>
+            <span><i class="fas fa-wifi"></i> <span data-i18n="mq.wifi">High-Speed WiFi</span></span>
+            <span><i class="fas fa-cocktail"></i> <span data-i18n="mq.events">Events &amp; Celebrations</span></span>
         </div>
     </div>
 
@@ -118,9 +128,9 @@
             <!-- Book a Stay Section -->
             <section id="book-stay" class="section active">
                 <div class="section-header reveal">
-                    <span class="section-eyebrow"><i class="fas fa-bed"></i> Find your vibe</span>
-                    <h2>Book a Stay</h2>
-                    <p>Fill in your details to book your perfect farmhouse experience</p>
+                    <span class="section-eyebrow"><i class="fas fa-bed"></i> <span data-i18n="stay.eyebrow">Find your vibe</span></span>
+                    <h2 data-i18n="stay.title">Book a Stay</h2>
+                    <p data-i18n="stay.sub">Fill in your details to book your perfect farmhouse experience</p>
                 </div>
 
                 <div class="stay-content">
@@ -156,13 +166,13 @@
                                             <source src="video/farmhouse-tour.mp4" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
-                                        <span class="video-ready-label">Add video/farmhouse-tour.mp4 to play your farmhouse tour</span>
+                                        <span class="video-ready-label" data-i18n="video.label">Add video/farmhouse-tour.mp4 to play your farmhouse tour</span>
                                     </div>
                                 </div>
                                 <button class="gallery-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
                                 <button class="gallery-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
                                 <div class="gallery-counter">1 / 8</div>
-                                <button class="gallery-badge lightbox-trigger"><i class="fas fa-expand"></i> Photos & Video</button>
+                                <button class="gallery-badge lightbox-trigger"><i class="fas fa-expand"></i> <span data-i18n="gal.badge">Photos &amp; Video</span></button>
                             </div>
                             <div class="gallery-thumbs">
                                 <div class="thumb active" data-index="0"><img src="images/exterior.jpg" alt="Thumbnail"><span class="thumb-caption"><i class="fas fa-home"></i></span></div>
@@ -178,7 +188,7 @@
 
                         <!-- About this stay -->
                         <div class="about-stay reveal">
-                            <h3>About this stay</h3>
+                            <h3 data-i18n="about.title">About this stay</h3>
 
                             <!-- Our Location (display only) -->
                             <div class="stay-location">
@@ -186,24 +196,24 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="location-details">
-                                    <span class="location-label">Our Location</span>
-                                    <span class="location-name">Serenity Farmhouse</span>
-                                    <span class="location-address"><i class="fas fa-map-pin"></i> Shamirpet, Hyderabad - 500078</span>
+                                    <span class="location-label" data-i18n="loc.label">Our Location</span>
+                                    <span class="location-name" data-i18n="loc.name">Serenity Farmhouse</span>
+                                    <span class="location-address"><i class="fas fa-map-pin"></i> <span data-i18n="loc.addr">Shamirpet, Hyderabad - 500078</span></span>
                                 </div>
                                 <a class="btn btn-outline btn-sm location-cta" href="https://www.google.com/maps/search/?api=1&query=Shamirpet+Hyderabad" target="_blank" rel="noopener">
-                                    <i class="fas fa-directions"></i> Get Directions
+                                    <i class="fas fa-directions"></i> <span data-i18n="loc.directions">Get Directions</span>
                                 </a>
                             </div>
 
                             <div class="stay-specs">
-                                <div class="spec"><i class="fas fa-users"></i> Up to 30 guests</div>
-                                <div class="spec"><i class="fas fa-bed"></i> 4 bedrooms</div>
-                                <div class="spec"><i class="fas fa-bath"></i> 4 bathrooms</div>
-                                <div class="spec"><i class="fas fa-ruler-combined"></i> 2 acres</div>
-                                <div class="spec"><i class="fas fa-water"></i> Private pool</div>
-                                <div class="spec"><i class="fas fa-concierge-bell"></i> House chef</div>
+                                <div class="spec"><i class="fas fa-users"></i> <span data-i18n="spec.guests">Up to 30 guests</span></div>
+                                <div class="spec"><i class="fas fa-bed"></i> <span data-i18n="spec.bedrooms">4 bedrooms</span></div>
+                                <div class="spec"><i class="fas fa-bath"></i> <span data-i18n="spec.bathrooms">4 bathrooms</span></div>
+                                <div class="spec"><i class="fas fa-ruler-combined"></i> <span data-i18n="spec.acres">2 acres</span></div>
+                                <div class="spec"><i class="fas fa-water"></i> <span data-i18n="spec.pool">Private pool</span></div>
+                                <div class="spec"><i class="fas fa-concierge-bell"></i> <span data-i18n="spec.chef">House chef</span></div>
                             </div>
-                            <p class="about-text">
+                            <p class="about-text" data-i18n="about.text">
                                 Nestled amidst 2 acres of lush greenery in Shamirpet, our farmhouse offers the perfect
                                 blend of rustic charm and modern luxury. Soak in the private swimming pool, gather around
                                 the bonfire under the stars, and enjoy a farm-to-table dining experience prepared by our
@@ -211,28 +221,28 @@
                             </p>
                             <div class="stay-status">
                                 <div class="status-tabs">
-                                    <button class="status-tab active" data-status="available"><i class="fas fa-check-circle"></i> Available</button>
-                                    <button class="status-tab" data-status="booked"><i class="fas fa-times-circle"></i> Booked</button>
-                                    <button class="status-tab" data-status="offer"><i class="fas fa-tag"></i> Offer</button>
-                                    <button class="status-tab" data-status="selected"><i class="fas fa-calendar-check"></i> Selected</button>
+                                    <button class="status-tab active" data-status="available"><i class="fas fa-check-circle"></i> <span data-i18n="cal.available">Available</span></button>
+                                    <button class="status-tab" data-status="booked"><i class="fas fa-times-circle"></i> <span data-i18n="cal.booked">Booked</span></button>
+                                    <button class="status-tab" data-status="offer"><i class="fas fa-tag"></i> <span data-i18n="cal.offer">Offer</span></button>
+                                    <button class="status-tab" data-status="selected"><i class="fas fa-calendar-check"></i> <span data-i18n="cal.selected">Selected</span></button>
                                 </div>
                             </div>
                             <div class="availability-calendar" id="availabilityCalendar">
                                 <!-- Calendar built by JS -->
                             </div>
                             <div class="calendar-legend">
-                                <span><i class="legend-dot dot-available"></i> Available</span>
-                                <span><i class="legend-dot dot-booked"></i> Booked</span>
-                                <span><i class="legend-dot dot-offer"></i> Offer</span>
-                                <span><i class="legend-dot dot-selected"></i> Selected</span>
+                                <span><i class="legend-dot dot-available"></i> <span data-i18n="cal.available">Available</span></span>
+                                <span><i class="legend-dot dot-booked"></i> <span data-i18n="cal.booked">Booked</span></span>
+                                <span><i class="legend-dot dot-offer"></i> <span data-i18n="cal.offer">Offer</span></span>
+                                <span><i class="legend-dot dot-selected"></i> <span data-i18n="cal.selected">Selected</span></span>
                             </div>
                         </div>
 
                         <!-- Ratings & Reviews -->
                         <div class="reviews-section reveal">
                             <div class="reviews-header">
-                                <h3>Ratings & Reviews</h3>
-                                <a href="#" class="see-all-link">See all 128 reviews <i class="fas fa-arrow-right"></i></a>
+                                <h3 data-i18n="rev.title">Ratings &amp; Reviews</h3>
+                                <a href="#" class="see-all-link"><span data-i18n="rev.seeall">See all 128 reviews</span> <i class="fas fa-arrow-right"></i></a>
                             </div>
                             <div class="rating-summary">
                                 <div class="rating-score">
@@ -245,31 +255,31 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star-half-alt"></i>
                                     </div>
-                                    <span class="score-reviews">Based on 128 verified stays</span>
+                                    <span class="score-reviews" data-i18n="rev.based">Based on 128 verified stays</span>
                                 </div>
                                 <div class="rating-bars">
                                     <div class="bar-row">
-                                        <span>Cleanliness</span>
+                                        <span data-i18n="rev.clean">Cleanliness</span>
                                         <div class="bar-track"><div class="bar-fill" style="width: 95%"></div></div>
                                         <span class="bar-value">4.9</span>
                                     </div>
                                     <div class="bar-row">
-                                        <span>Location</span>
+                                        <span data-i18n="rev.loc">Location</span>
                                         <div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
                                         <span class="bar-value">4.6</span>
                                     </div>
                                     <div class="bar-row">
-                                        <span>Communication</span>
+                                        <span data-i18n="rev.comm">Communication</span>
                                         <div class="bar-track"><div class="bar-fill" style="width: 86%"></div></div>
                                         <span class="bar-value">4.4</span>
                                     </div>
                                     <div class="bar-row">
-                                        <span>Value for money</span>
+                                        <span data-i18n="rev.value">Value for money</span>
                                         <div class="bar-track"><div class="bar-fill" style="width: 83%"></div></div>
                                         <span class="bar-value">4.3</span>
                                     </div>
                                     <div class="bar-row">
-                                        <span>Services</span>
+                                        <span data-i18n="rev.svc">Services</span>
                                         <div class="bar-track"><div class="bar-fill" style="width: 87%"></div></div>
                                         <span class="bar-value">4.5</span>
                                     </div>
@@ -313,64 +323,64 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-outline btn-block" id="loadMoreReviews"><i class="fas fa-comments"></i> Load more reviews</button>
+                            <button class="btn btn-outline btn-block" id="loadMoreReviews"><i class="fas fa-comments"></i> <span data-i18n="rev.more">Load more reviews</span></button>
                         </div>
                     </div>
 
                     <!-- Stay Enquiry Form -->
                     <div class="enquiry-form-container">
                         <div class="form-card reveal">
-                            <h3>Stay Enquiry</h3>
+                            <h3 data-i18n="form.stayTitle">Stay Enquiry</h3>
                             <form id="stayForm">
                                 <div class="form-group">
-                                    <label>Full Name <span class="required">*</span></label>
-                                    <input type="text" name="fullName" placeholder="Enter your full name" required>
-                                    <span class="error-message">Full name is required</span>
+                                    <label><span data-i18n="form.fullName">Full Name</span> <span class="required">*</span></label>
+                                    <input type="text" name="fullName" placeholder="Enter your full name" data-i18n-placeholder="ph.fullName" required>
+                                    <span class="error-message" data-i18n="err.name">Full name is required</span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Phone Number <span class="required">*</span></label>
-                                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
-                                    <span class="error-message">Enter a valid phone number</span>
+                                    <label><span data-i18n="form.phone">Phone Number</span> <span class="required">*</span></label>
+                                    <input type="tel" name="phone" placeholder="Enter your phone number" data-i18n-placeholder="ph.phone" required>
+                                    <span class="error-message" data-i18n="err.phone">Enter a valid phone number</span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Email <span class="required">*</span></label>
-                                    <input type="email" name="email" placeholder="Enter your email" required>
-                                    <span class="error-message">Enter a valid email</span>
+                                    <label><span data-i18n="form.email">Email</span> <span class="required">*</span></label>
+                                    <input type="email" name="email" placeholder="Enter your email" data-i18n-placeholder="ph.email" required>
+                                    <span class="error-message" data-i18n="err.email">Enter a valid email</span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Expected Guests <span class="required">*</span></label>
+                                    <label><span data-i18n="form.guests">Expected Guests</span> <span class="required">*</span></label>
                                     <div class="select-wrapper">
                                         <select name="guests" required>
-                                            <option value="">Select Guests</option>
-                                            <option value="1-2">1-2 Guests</option>
-                                            <option value="2-4">2-4 Guests</option>
-                                            <option value="4-6">4-6 Guests</option>
-                                            <option value="6-8">6-8 Guests</option>
-                                            <option value="8-10">8-10 Guests</option>
+                                            <option value="" data-i18n="form.selectGuests">Select Guests</option>
+                                            <option value="1-2" data-i18n="guests.12">1-2 Guests</option>
+                                            <option value="2-4" data-i18n="guests.24">2-4 Guests</option>
+                                            <option value="4-6" data-i18n="guests.46">4-6 Guests</option>
+                                            <option value="6-8" data-i18n="guests.68">6-8 Guests</option>
+                                            <option value="8-10" data-i18n="guests.810">8-10 Guests</option>
                                         </select>
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Attach Aadhar Proof <span class="required">*</span></label>
+                                    <label><span data-i18n="form.aadhar">Attach Aadhar Proof</span> <span class="required">*</span></label>
                                     <div class="file-upload">
                                         <input type="file" name="aadhar" id="aadharStay" accept=".jpg,.jpeg,.png,.pdf" required>
                                         <div class="file-upload-label">
                                             <i class="fas fa-cloud-upload-alt"></i>
-                                            <span class="file-upload-text">Click to upload Aadhar card</span>
-                                            <small>JPG, PNG or PDF - Max 5MB</small>
+                                            <span class="file-upload-text" data-i18n="form.upload">Click to upload Aadhar card</span>
+                                            <small data-i18n="form.fileHint">JPG, PNG or PDF - Max 5MB</small>
                                         </div>
                                     </div>
-                                    <span class="error-message">Please attach your Aadhar card proof</span>
+                                    <span class="error-message" data-i18n="err.aadhar">Please attach your Aadhar card proof</span>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label>Check-in Date <span class="required">*</span></label>
+                                        <label><span data-i18n="form.checkin">Check-in Date</span> <span class="required">*</span></label>
                                         <div class="date-input">
                                             <input type="date" name="checkin" required>
                                             <i class="fas fa-calendar-alt"></i>
@@ -378,7 +388,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Check-out Date <span class="required">*</span></label>
+                                        <label><span data-i18n="form.checkout">Check-out Date</span> <span class="required">*</span></label>
                                         <div class="date-input">
                                             <input type="date" name="checkout" required>
                                             <i class="fas fa-calendar-alt"></i>
@@ -387,7 +397,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Check-in Time <span class="required">*</span></label>
+                                    <label><span data-i18n="form.checkinTime">Check-in Time</span> <span class="required">*</span></label>
                                     <div class="date-input time-input">
                                         <input type="time" name="checkinTime" required>
                                         <i class="fas fa-clock"></i>
@@ -395,7 +405,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Check-out Time <span class="required">*</span></label>
+                                    <label><span data-i18n="form.checkoutTime">Check-out Time</span> <span class="required">*</span></label>
                                     <div class="date-input time-input">
                                         <input type="time" name="checkoutTime" required>
                                         <i class="fas fa-clock"></i>
@@ -403,48 +413,48 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Available Time Slots</label>
+                                    <label data-i18n="form.slots">Available Time Slots</label>
                                     <div class="time-slots">
                                         <label class="time-slot">
                                             <input type="radio" name="timeSlot" value="morning">
                                             <span class="slot-label">
                                                 <i class="fas fa-sun"></i>
-                                                Morning (9 AM - 12 PM)
+                                                <span data-i18n="slot.morning">Morning (9 AM - 12 PM)</span>
                                             </span>
                                         </label>
                                         <label class="time-slot">
                                             <input type="radio" name="timeSlot" value="afternoon">
                                             <span class="slot-label">
                                                 <i class="fas fa-cloud-sun"></i>
-                                                Afternoon (12 PM - 4 PM)
+                                                <span data-i18n="slot.afternoon">Afternoon (12 PM - 4 PM)</span>
                                             </span>
                                         </label>
                                         <label class="time-slot">
                                             <input type="radio" name="timeSlot" value="evening">
                                             <span class="slot-label">
                                                 <i class="fas fa-moon"></i>
-                                                Evening (4 PM - 8 PM)
+                                                <span data-i18n="slot.evening">Evening (4 PM - 8 PM)</span>
                                             </span>
                                         </label>
                                         <label class="time-slot">
                                             <input type="radio" name="timeSlot" value="night">
                                             <span class="slot-label">
                                                 <i class="fas fa-star"></i>
-                                                Night Stay (8 PM - 8 AM)
+                                                <span data-i18n="slot.night">Night Stay (8 PM - 8 AM)</span>
                                             </span>
                                         </label>
                                         <label class="time-slot">
                                             <input type="radio" name="timeSlot" value="fullday">
                                             <span class="slot-label">
                                                 <i class="fas fa-sun"></i>
-                                                Full Day (11 AM - 11 AM next day)
+                                                <span data-i18n="slot.fullday">Full Day (11 AM - 11 AM next day)</span>
                                             </span>
                                         </label>
                                     </div>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    <i class="fas fa-paper-plane"></i> Submit Enquiry
+                                    <i class="fas fa-paper-plane"></i> <span data-i18n="form.submit">Submit Enquiry</span>
                                 </button>
                             </form>
                         </div>
@@ -452,78 +462,78 @@
                         <!-- Amenities -->
                         <div class="amenities reveal">
                             <div class="amenities-header">
-                                <h4>Amenities</h4>
-                                <span class="amenities-count">+12 facilities</span>
+                                <h4 data-i18n="ame.title">Amenities</h4>
+                                <span class="amenities-count" data-i18n="ame.count">+12 facilities</span>
                             </div>
                             <div class="amenities-grid">
                                 <div class="amenity-item">
                                     <i class="fas fa-swimming-pool"></i>
-                                    <span>Swimming Pool</span>
+                                    <span data-i18n="ame.pool">Swimming Pool</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-utensils"></i>
-                                    <span>House Kitchen</span>
+                                    <span data-i18n="ame.kitchen">House Kitchen</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-fire"></i>
-                                    <span>BBQ Area</span>
+                                    <span data-i18n="ame.bbq">BBQ Area</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-tree"></i>
-                                    <span>Lawn Garden</span>
+                                    <span data-i18n="ame.garden">Lawn Garden</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-wifi"></i>
-                                    <span>Free WiFi</span>
+                                    <span data-i18n="ame.wifi">Free WiFi</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-car"></i>
-                                    <span>Free Parking</span>
+                                    <span data-i18n="ame.parking">Free Parking</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-snowflake"></i>
-                                    <span>AC Rooms</span>
+                                    <span data-i18n="ame.ac">AC Rooms</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-tv"></i>
-                                    <span>Smart TV</span>
+                                    <span data-i18n="ame.tv">Smart TV</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-generator"></i>
-                                    <span>Power Backup</span>
+                                    <span data-i18n="ame.power">Power Backup</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-child"></i>
-                                    <span>Kids Play Area</span>
+                                    <span data-i18n="ame.kids">Kids Play Area</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-first-aid"></i>
-                                    <span>First Aid Kit</span>
+                                    <span data-i18n="ame.firstaid">First Aid Kit</span>
                                 </div>
                                 <div class="amenity-item">
                                     <i class="fas fa-shield-alt"></i>
-                                    <span>24/7 Security</span>
+                                    <span data-i18n="ame.security">24/7 Security</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Cancellation Policy -->
                         <div class="cancellation-policy">
-                            <h4>Cancellation Policy</h4>
-                            <p class="policy-note">No cancellation or refund is allowed due to the short notice period.</p>
+                            <h4 data-i18n="can.title">Cancellation Policy</h4>
+                            <p class="policy-note" data-i18n="can.note">No cancellation or refund is allowed due to the short notice period.</p>
                             <div class="policy-timeline">
                                 <div class="policy-item refund">
                                     <i class="fas fa-check-circle"></i>
                                     <div>
-                                        <span class="policy-title">100% Refund</span>
-                                        <span class="policy-desc">Before 15 days</span>
+                                        <span class="policy-title" data-i18n="can.refund">100% Refund</span>
+                                        <span class="policy-desc" data-i18n="can.refundDesc">Before 15 days</span>
                                     </div>
                                 </div>
                                 <div class="policy-item no-refund">
                                     <i class="fas fa-times-circle"></i>
                                     <div>
-                                        <span class="policy-title">No Refund</span>
-                                        <span class="policy-desc">Less than 15 days</span>
+                                        <span class="policy-title" data-i18n="can.norefund">No Refund</span>
+                                        <span class="policy-desc" data-i18n="can.norefundDesc">Less than 15 days</span>
                                     </div>
                                 </div>
                             </div>
@@ -531,27 +541,27 @@
 
                         <!-- Location Advantage -->
                         <div class="location-advantage reveal">
-                            <h4>Location Advantage</h4>
+                            <h4 data-i18n="locadv.title">Location Advantage</h4>
                             <ul>
-                                <li><i class="fas fa-clock"></i> 30 mins from city center</li>
-                                <li><i class="fas fa-hospital"></i> 10 mins to nearest hospital</li>
-                                <li><i class="fas fa-shopping-bag"></i> 15 mins to shopping mall</li>
-                                <li><i class="fas fa-gas-pump"></i> 2 mins to nearest fuel station</li>
+                                <li><i class="fas fa-clock"></i> <span data-i18n="locadv.city">30 mins from city center</span></li>
+                                <li><i class="fas fa-hospital"></i> <span data-i18n="locadv.hospital">10 mins to nearest hospital</span></li>
+                                <li><i class="fas fa-shopping-bag"></i> <span data-i18n="locadv.mall">15 mins to shopping mall</span></li>
+                                <li><i class="fas fa-gas-pump"></i> <span data-i18n="locadv.fuel">2 mins to nearest fuel station</span></li>
                             </ul>
                         </div>
 
                         <!-- Extra Charges -->
                         <div class="cancellation-policy extra-charges reveal">
-                            <h4>Extra Charges (if used)</h4>
+                            <h4 data-i18n="extra.title">Extra Charges (if used)</h4>
                             <div class="extra-list">
-                                <div class="extra-row"><span>Extra guest (above 10)</span><strong>₹500</strong><span class="extra-unit">/person</span></div>
-                                <div class="extra-row"><span>Extra hour</span><strong>₹1,000</strong><span class="extra-unit">/hour</span></div>
-                                <div class="extra-row"><span>Extra room (stay-back)</span><strong>₹1,500</strong><span class="extra-unit">/room</span></div>
-                                <div class="extra-row"><span>BBQ setup &amp; charcoal</span><strong>₹2,000</strong><span class="extra-unit">/session</span></div>
-                                <div class="extra-row"><span>Pool cleaning (extra)</span><strong>₹800</strong><span class="extra-unit">/use</span></div>
-                                <div class="extra-row"><span>Decor / photo setup</span><strong>₹3,000</strong><span class="extra-unit">/setup</span></div>
+                                <div class="extra-row"><span data-i18n="extra.guest">Extra guest (above 10)</span><strong>₹500</strong><span class="extra-unit" data-i18n="extra.perPerson">/person</span></div>
+                                <div class="extra-row"><span data-i18n="extra.hour">Extra hour</span><strong>₹1,000</strong><span class="extra-unit" data-i18n="extra.perHour">/hour</span></div>
+                                <div class="extra-row"><span data-i18n="extra.room">Extra room (stay-back)</span><strong>₹1,500</strong><span class="extra-unit" data-i18n="extra.perRoom">/room</span></div>
+                                <div class="extra-row"><span data-i18n="extra.bbq">BBQ setup &amp; charcoal</span><strong>₹2,000</strong><span class="extra-unit" data-i18n="extra.perSession">/session</span></div>
+                                <div class="extra-row"><span data-i18n="extra.pool">Pool cleaning (extra)</span><strong>₹800</strong><span class="extra-unit" data-i18n="extra.perUse">/use</span></div>
+                                <div class="extra-row"><span data-i18n="extra.decor">Decor / photo setup</span><strong>₹3,000</strong><span class="extra-unit" data-i18n="extra.perSetup">/setup</span></div>
                             </div>
-                            <p class="extra-note">Final amount depends on actual usage. Confirm with our team before your event.</p>
+                            <p class="extra-note" data-i18n="extra.note">Final amount depends on actual usage. Confirm with our team before your event.</p>
                         </div>
                     </div>
                 </div>
@@ -560,77 +570,79 @@
             <!-- Events & Celebrations Section -->
             <section id="events" class="section">
                 <div class="section-header reveal">
-                    <span class="section-eyebrow"><i class="fas fa-champagne-glasses"></i> Let's party</span>
-                    <h2>Events & Celebrations</h2>
-                    <p>Tell us about your event and we'll create the perfect experience</p>
+                    <span class="section-eyebrow"><i class="fas fa-champagne-glasses"></i> <span data-i18n="ev.eyebrow">Let's party</span></span>
+                    <h2 data-i18n="nav.events">Events &amp; Celebrations</h2>
+                    <p data-i18n="ev.sub">Tell us about your event and we'll create the perfect experience</p>
                 </div>
 
                 <div class="events-content">
                     <!-- Menu Preview -->
                     <div class="menu-section reveal">
-                        <h3>Menu</h3>
+                        <h3 data-i18n="menu.title">Menu</h3>
                         <div class="menu-preview">
                             <div class="menu-grid">
-                                <div class="menu-item-img"><img src="images/kitchen.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-utensils"></i> Starters</span></div>
-                                <div class="menu-item-img"><img src="images/bbq.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-drumstick-bite"></i> Main Course</span></div>
-                                <div class="menu-item-img"><img src="images/garden.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-ice-cream"></i> Desserts</span></div>
+                                <div class="menu-item-img"><img src="images/kitchen.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-utensils"></i> <span data-i18n="menu.starters">Starters</span></span></div>
+                                <div class="menu-item-img"><img src="images/bbq.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-drumstick-bite"></i> <span data-i18n="menu.main">Main Course</span></span></div>
+                                <div class="menu-item-img"><img src="images/garden.jpg" alt="Menu item"><span class="menu-item-label"><i class="fas fa-ice-cream"></i> <span data-i18n="menu.desserts">Desserts</span></span></div>
                                 <div class="menu-item-img menu-video-tile">
                                     <video controls preload="none" poster="images/kitchen.jpg">
                                         <source src="video/menu-tour.mp4" type="video/mp4">
                                     </video>
-                                    <span class="menu-item-label"><i class="fas fa-play"></i> Menu Video</span>
+                                    <span class="menu-item-label"><i class="fas fa-play"></i> <span data-i18n="menu.video">Menu Video</span></span>
                                 </div>
                             </div>
                             <div class="menu-note">
                                 <i class="fas fa-info-circle"></i>
-                                Full menu images will be available soon. Contact us on WhatsApp for the complete menu.
+                                <span data-i18n="menu.note">
+                                    Full menu images will be available soon. Contact us on WhatsApp for the complete menu.
+                                </span>
                             </div>
                         </div>
 
-                        <h4>Budget-Friendly Options</h4>
+                        <h4 data-i18n="menu.budget">Budget-Friendly Options</h4>
                         <div class="budget-options">
                             <div class="budget-card">
                                 <div class="budget-image">
                                     <img src="images/garden.jpg" alt="Veg package">
                                 </div>
                                 <div class="budget-icon"><i class="fas fa-leaf"></i></div>
-                                <h5>Veg Package</h5>
+                                <h5 data-i18n="pkg.vegName">Veg Package</h5>
                                 <ul class="budget-features">
-                                    <li><i class="fas fa-check"></i> Pure vegetarian spread</li>
-                                    <li><i class="fas fa-check"></i> Regional delicacies</li>
-                                    <li><i class="fas fa-check"></i> Unlimited beverages</li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.veg.f1">Pure vegetarian spread</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.veg.f2">Regional delicacies</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.veg.f3">Unlimited beverages</span></li>
                                 </ul>
-                                <span class="budget-price"><strong>₹350</strong>/person</span>
-                                <button class="btn btn-sm btn-outline budget-select" data-package="Veg">Select Package</button>
+                                <span class="budget-price"><strong>₹350</strong><span data-i18n="pkg.perPerson">/person</span></span>
+                                <button class="btn btn-sm btn-outline budget-select" data-package="Veg" data-i18n="pkg.select">Select Package</button>
                             </div>
                             <div class="budget-card popular">
                                 <div class="budget-image">
                                     <img src="images/bbq.jpg" alt="Non-veg package">
                                 </div>
                                 <div class="budget-icon"><i class="fas fa-drumstick-bite"></i></div>
-                                <span class="popular-badge">Most Popular</span>
-                                <h5>Non-Veg Package</h5>
+                                <span class="popular-badge" data-i18n="pkg.popular">Most Popular</span>
+                                <h5 data-i18n="pkg.nonvegName">Non-Veg Package</h5>
                                 <ul class="budget-features">
-                                    <li><i class="fas fa-check"></i> Authentic Hyderabadi feast</li>
-                                    <li><i class="fas fa-check"></i> BBQ & grill counter</li>
-                                    <li><i class="fas fa-check"></i> Live dessert station</li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.nonveg.f1">Authentic Hyderabadi feast</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.nonveg.f2">BBQ &amp; grill counter</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.nonveg.f3">Live dessert station</span></li>
                                 </ul>
-                                <span class="budget-price"><strong>₹500</strong>/person</span>
-                                <button class="btn btn-sm btn-outline budget-select" data-package="Non-Veg">Select Package</button>
+                                <span class="budget-price"><strong>₹500</strong><span data-i18n="pkg.perPerson">/person</span></span>
+                                <button class="btn btn-sm btn-outline budget-select" data-package="Non-Veg" data-i18n="pkg.select">Select Package</button>
                             </div>
                             <div class="budget-card">
                                 <div class="budget-image">
                                     <img src="images/kitchen.jpg" alt="Premium package">
                                 </div>
                                 <div class="budget-icon"><i class="fas fa-concierge-bell"></i></div>
-                                <h5>Premium Package</h5>
+                                <h5 data-i18n="pkg.premName">Premium Package</h5>
                                 <ul class="budget-features">
-                                    <li><i class="fas fa-check"></i> Multi-cuisine spread</li>
-                                    <li><i class="fas fa-check"></i> Live cooking counters</li>
-                                    <li><i class="fas fa-check"></i> Personalized service</li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.prem.f1">Multi-cuisine spread</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.prem.f2">Live cooking counters</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="pkg.prem.f3">Personalized service</span></li>
                                 </ul>
-                                <span class="budget-price"><strong>₹800</strong>/person</span>
-                                <button class="btn btn-sm btn-outline budget-select" data-package="Premium">Select Package</button>
+                                <span class="budget-price"><strong>₹800</strong><span data-i18n="pkg.perPerson">/person</span></span>
+                                <button class="btn btn-sm btn-outline budget-select" data-package="Premium" data-i18n="pkg.select">Select Package</button>
                             </div>
                         </div>
                     </div>
@@ -638,7 +650,7 @@
                     <!-- Events Form -->
                     <div class="events-form-container">
                         <div class="form-card reveal">
-                            <h3>Tell Us About Your Event</h3>
+                            <h3 data-i18n="ev.title">Tell Us About Your Event</h3>
                             <div class="selected-package" id="selectedPackage" style="display:none">
                                 <i class="fas fa-check-circle"></i>
                                 <span id="selectedPackageName"></span>
@@ -647,96 +659,96 @@
                             <form id="eventsForm">
                                 <input type="hidden" name="package" id="packageField" value="">
                                 <div class="form-group">
-                                    <label>Event Type <span class="required">*</span></label>
-                                    <p class="select-hint">Select all that apply <span class="count">(0/4)</span></p>
+                                    <label><span data-i18n="ev.type">Event Type</span> <span class="required">*</span></label>
+                                    <p class="select-hint"><span data-i18n="ev.hint">Select all that apply</span> <span class="count">(0/4)</span></p>
                                     <div class="event-types">
                                         <label class="event-checkbox">
                                             <input type="checkbox" name="eventType" value="wedding">
                                             <span class="checkbox-custom"></span>
-                                            <span class="checkbox-label">Wedding/Pre-wedding</span>
+                                            <span class="checkbox-label" data-i18n="ev.wedding">Wedding/Pre-wedding</span>
                                         </label>
                                         <label class="event-checkbox">
                                             <input type="checkbox" name="eventType" value="corporate">
                                             <span class="checkbox-custom"></span>
-                                            <span class="checkbox-label">Corporate Retreat / Offsite</span>
+                                            <span class="checkbox-label" data-i18n="ev.corporate">Corporate Retreat / Offsite</span>
                                         </label>
                                         <label class="event-checkbox">
                                             <input type="checkbox" name="eventType" value="spiritual">
                                             <span class="checkbox-custom"></span>
-                                            <span class="checkbox-label">Spiritual or Cultural Gathering</span>
+                                            <span class="checkbox-label" data-i18n="ev.spiritual">Spiritual or Cultural Gathering</span>
                                         </label>
                                         <label class="event-checkbox">
                                             <input type="checkbox" name="eventType" value="private">
                                             <span class="checkbox-custom"></span>
-                                            <span class="checkbox-label">Private Celebration</span>
+                                            <span class="checkbox-label" data-i18n="ev.private">Private Celebration</span>
                                         </label>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Full Name <span class="required">*</span></label>
-                                    <input type="text" name="fullName" placeholder="Enter your full name" required>
-                                    <span class="error-message">Full name is required</span>
+                                    <label><span data-i18n="form.fullName">Full Name</span> <span class="required">*</span></label>
+                                    <input type="text" name="fullName" placeholder="Enter your full name" data-i18n-placeholder="ph.fullName" required>
+                                    <span class="error-message" data-i18n="err.name">Full name is required</span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Phone Number <span class="required">*</span></label>
-                                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
-                                    <span class="error-message">Enter a valid phone number</span>
+                                    <label><span data-i18n="form.phone">Phone Number</span> <span class="required">*</span></label>
+                                    <input type="tel" name="phone" placeholder="Enter your phone number" data-i18n-placeholder="ph.phone" required>
+                                    <span class="error-message" data-i18n="err.phone">Enter a valid phone number</span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Email <span class="required">*</span></label>
-                                    <input type="email" name="email" placeholder="Enter your email" required>
-                                    <span class="error-message">Enter a valid email</span>
+                                    <label><span data-i18n="form.email">Email</span> <span class="required">*</span></label>
+                                    <input type="email" name="email" placeholder="Enter your email" data-i18n-placeholder="ph.email" required>
+                                    <span class="error-message" data-i18n="err.email">Enter a valid email</span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Expected Guests <span class="required">*</span></label>
+                                    <label><span data-i18n="form.guests">Expected Guests</span> <span class="required">*</span></label>
                                     <div class="select-wrapper">
                                         <select name="guests" required>
-                                            <option value="">Select Guests</option>
-                                            <option value="1-2">1-2 Guests</option>
-                                            <option value="2-4">2-4 Guests</option>
-                                            <option value="4-6">4-6 Guests</option>
-                                            <option value="6-8">6-8 Guests</option>
-                                            <option value="8-10">8-10 Guests</option>
+                                            <option value="" data-i18n="form.selectGuests">Select Guests</option>
+                                            <option value="1-2" data-i18n="guests.12">1-2 Guests</option>
+                                            <option value="2-4" data-i18n="guests.24">2-4 Guests</option>
+                                            <option value="4-6" data-i18n="guests.46">4-6 Guests</option>
+                                            <option value="6-8" data-i18n="guests.68">6-8 Guests</option>
+                                            <option value="8-10" data-i18n="guests.810">8-10 Guests</option>
                                         </select>
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Stay-back Rooms Required <span class="required">*</span></label>
+                                    <label><span data-i18n="ev.rooms">Stay-back Rooms Required</span> <span class="required">*</span></label>
                                     <div class="select-wrapper">
                                         <select name="rooms" required>
-                                            <option value="">Choose accommodation</option>
-                                            <option value="none">No rooms needed</option>
-                                            <option value="1-2">1-2 Rooms</option>
-                                            <option value="3-5">3-5 Rooms</option>
-                                            <option value="6-10">6-10 Rooms</option>
-                                            <option value="10+">10+ Rooms</option>
+                                            <option value="" data-i18n="ev.chooseAcc">Choose accommodation</option>
+                                            <option value="none" data-i18n="ev.noRooms">No rooms needed</option>
+                                            <option value="1-2" data-i18n="rooms.12">1-2 Rooms</option>
+                                            <option value="3-5" data-i18n="rooms.35">3-5 Rooms</option>
+                                            <option value="6-10" data-i18n="rooms.610">6-10 Rooms</option>
+                                            <option value="10+" data-i18n="rooms.10">10+ Rooms</option>
                                         </select>
                                         <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Attach Aadhar Proof <span class="required">*</span></label>
+                                    <label><span data-i18n="form.aadhar">Attach Aadhar Proof</span> <span class="required">*</span></label>
                                     <div class="file-upload">
                                         <input type="file" name="aadhar" id="aadharEvents" accept=".jpg,.jpeg,.png,.pdf" required>
                                         <div class="file-upload-label">
                                             <i class="fas fa-cloud-upload-alt"></i>
-                                            <span class="file-upload-text">Click to upload Aadhar card</span>
-                                            <small>JPG, PNG or PDF - Max 5MB</small>
+                                            <span class="file-upload-text" data-i18n="form.upload">Click to upload Aadhar card</span>
+                                            <small data-i18n="form.fileHint">JPG, PNG or PDF - Max 5MB</small>
                                         </div>
                                     </div>
-                                    <span class="error-message">Please attach your Aadhar card proof</span>
+                                    <span class="error-message" data-i18n="err.aadhar">Please attach your Aadhar card proof</span>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label>Check-in Date <span class="required">*</span></label>
+                                        <label><span data-i18n="form.checkin">Check-in Date</span> <span class="required">*</span></label>
                                         <div class="date-input">
                                             <input type="date" name="checkin" required>
                                             <i class="fas fa-calendar-alt"></i>
@@ -744,7 +756,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Check-out Date <span class="required">*</span></label>
+                                        <label><span data-i18n="form.checkout">Check-out Date</span> <span class="required">*</span></label>
                                         <div class="date-input">
                                             <input type="date" name="checkout" required>
                                             <i class="fas fa-calendar-alt"></i>
@@ -753,9 +765,9 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    <i class="fas fa-search"></i> Find my Perfect Experience
+                                    <i class="fas fa-search"></i> <span data-i18n="ev.submit">Find my Perfect Experience</span>
                                 </button>
-                                <p class="form-note">Our team will get in touch with you within 24 hours</p>
+                                <p class="form-note" data-i18n="ev.note">Our team will get in touch with you within 24 hours</p>
                             </form>
                         </div>
                     </div>
@@ -765,7 +777,7 @@
     </main>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/919876543210?text=Hi%20Sanjana%2C%20I%20would%20like%20to%20book%20a%20stay%20at%20the%20Farmhouse." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp with Sanjana Thirandasu">
+    <a href="https://wa.me/919876543210?text=Hi%20Sanjana%2C%20I%20would%20like%20to%20book%20a%20stay%20at%20the%20Farmhouse." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp with Sanjana Thirandasu" data-i18n-aria="wa.aria">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -773,12 +785,12 @@
     <section class="qr-section">
         <div class="container">
             <div class="qr-content reveal">
-                <h3>Download Our App</h3>
-                <p>Scan the QR code to download the app</p>
+                <h3 data-i18n="qr.title">Download Our App</h3>
+                <p data-i18n="qr.sub">Scan the QR code to download the app</p>
                 <div class="qr-code">
                     <div class="qr-placeholder">
                         <i class="fas fa-qrcode"></i>
-                        <span>QR Code</span>
+                        <span data-i18n="qr.code">QR Code</span>
                     </div>
                 </div>
             </div>
@@ -803,9 +815,44 @@
             <div class="modal-icon">
                 <i class="fas fa-check-circle"></i>
             </div>
-            <h3>Enquiry Sent!</h3>
-            <p>Thank you for choosing DestinMe. Our travel experts will get in touch with you shortly.</p>
-            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+            <h3 data-i18n="modal.title">Enquiry Sent!</h3>
+            <p data-i18n="modal.sub">Thank you for choosing DestinMe. Our travel experts will get in touch with you shortly.</p>
+            <button class="btn btn-primary" onclick="closeModal()"><span data-i18n="modal.close">Close</span></button>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal terms-modal" id="termsModal">
+        <div class="modal-content terms-content">
+            <button type="button" class="terms-close" id="termsClose" aria-label="Close"><i class="fas fa-times"></i></button>
+            <h3 data-i18n="terms.title">Terms &amp; Conditions</h3>
+            <div class="terms-body">
+                <div class="terms-group">
+                    <h4 data-i18n="terms.booking.title">Booking &amp; Payment</h4>
+                    <p data-i18n="terms.booking.p1">A booking is confirmed only after the advance payment is received. Rates quoted per night cover the standard occupancy of up to 30 guests.</p>
+                    <p data-i18n="terms.booking.p2">Check-in is at 11 AM and check-out by 11 AM the next day unless a different time slot is selected.</p>
+                </div>
+                <div class="terms-group">
+                    <h4 data-i18n="terms.rules.title">Farmhouse Rules</h4>
+                    <p data-i18n="terms.rules.p1">Aadhar proof of the booking guest is mandatory at the time of booking and check-in.</p>
+                    <p data-i18n="terms.rules.p2">Smoking inside rooms, loud music after 10 PM, and events beyond the booked capacity are not permitted without prior approval.</p>
+                    <p data-i18n="terms.rules.p3">Damages to property or missing items will be charged at replacement cost.</p>
+                </div>
+                <div class="terms-group">
+                    <h4 data-i18n="terms.liability.title">Liability &amp; Safety</h4>
+                    <p data-i18n="terms.liability.p1">Swimming pool is used at the visitor's own risk. Children must always be accompanied by adults.</p>
+                    <p data-i18n="terms.liability.p2">The farmhouse is not responsible for loss or damage to personal belongings.</p>
+                </div>
+                <div class="terms-group">
+                    <h4 data-i18n="terms.cancel.title">Cancellation &amp; Refunds</h4>
+                    <p data-i18n="terms.cancel.p1">No cancellation or refund is allowed within 15 days of the booking date due to the short notice period.</p>
+                </div>
+                <div class="terms-group">
+                    <h4 data-i18n="terms.privacy.title">Privacy</h4>
+                    <p data-i18n="terms.privacy.p1">Your personal details and documents are used only to process your booking and are never shared with third parties.</p>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="termsAccept"><span data-i18n="terms.accept">I Agree</span></button>
         </div>
     </div>
 
@@ -818,16 +865,16 @@
                         <i class="fas fa-home"></i>
                         <span>FarmHouse</span>
                     </div>
-                    <p>Experience luxury in nature</p>
+                    <p data-i18n="foot.tagline">Experience luxury in nature</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="#book-stay" class="nav-link-footer" data-tab="book-stay">Book a Stay</a>
-                    <a href="#events" class="nav-link-footer" data-tab="events">Events</a>
-                    <a href="#footer-contact" id="contactUsLink">Contact Us</a>
+                    <h4 data-i18n="foot.quick">Quick Links</h4>
+                    <a href="#book-stay" class="nav-link-footer" data-tab="book-stay" data-i18n="foot.stay">Book a Stay</a>
+                    <a href="#events" class="nav-link-footer" data-tab="events" data-i18n="foot.events">Events</a>
+                    <a href="#footer-contact" id="contactUsLink" data-i18n="foot.contact">Contact Us</a>
                 </div>
                 <div class="footer-contact" id="footer-contact">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="foot.contactTitle">Contact</h4>
                     <p><i class="fab fa-whatsapp"></i> Hitesh Sevlani</p>
                     <p><i class="fas fa-user-tie"></i> Sanjana Thirandasu</p>
                     <p><i class="fas fa-phone"></i> +91 98765 43210</p>
@@ -835,11 +882,15 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 FarmHouse. All rights reserved.</p>
+                <p>&copy; 2026 FarmHouse. <span data-i18n="foot.rights">All rights reserved.</span></p>
+                <p class="footer-legal">
+                    <a href="#" id="termsLink" data-i18n="terms.title">Terms &amp; Conditions</a>
+                </p>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

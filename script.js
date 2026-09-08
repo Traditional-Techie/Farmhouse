@@ -21,6 +21,12 @@ const countDisplay = document.querySelector('.count');
 const WHATSAPP_NUMBER = '917981275247';
 const OWNER_EMAIL = 'svanik.thirandasu@gmail.com';
 
+// Translate a UI string through the I18N engine (translations.js)
+function tr(key, vars) {
+    if (window.I18N && typeof I18N.t === 'function') return I18N.t(key, vars);
+    return key || '';
+}
+
 // Enable CSS scroll-reveal animations only when JS is running
 document.documentElement.classList.add('js-anim');
 function revealAll() {
@@ -194,7 +200,7 @@ document.querySelectorAll('.file-upload input[type="file"]').forEach(input => {
             const validTypes = ['image/jpeg', 'image/png', 'application/pdf'];
             
             if (file.size > maxSize) {
-                showNotification('File too large. Maximum size is 5MB.', 'warning');
+                showNotification(tr('notif.fileSize'), 'warning');
                 this.value = '';
                 wrapper.classList.remove('has-file');
                 formGroup.classList.add('error');
@@ -202,7 +208,7 @@ document.querySelectorAll('.file-upload input[type="file"]').forEach(input => {
             }
             
             if (!validTypes.includes(file.type)) {
-                showNotification('Invalid file type. Please upload JPG, PNG or PDF.', 'warning');
+                showNotification(tr('notif.fileType'), 'warning');
                 this.value = '';
                 wrapper.classList.remove('has-file');
                 formGroup.classList.add('error');
@@ -246,7 +252,7 @@ eventsForm.addEventListener('submit', (e) => {
     // Check if at least one event type is selected
     const checkedEvents = document.querySelectorAll('input[name="eventType"]:checked');
     if (checkedEvents.length === 0) {
-        alert('Please select at least one event type');
+        alert(tr('err.eventType'));
         return;
     }
     
@@ -362,7 +368,44 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && successModal.classList.contains('active')) {
         closeModal();
     }
+    if (e.key === 'Escape' && termsModal && termsModal.classList.contains('active')) {
+        closeTerms();
+    }
 });
+
+// Terms & Conditions Modal
+const termsModal = document.getElementById('termsModal');
+const termsLink = document.getElementById('termsLink');
+const termsClose = document.getElementById('termsClose');
+const termsAccept = document.getElementById('termsAccept');
+
+function openTerms() {
+    if (termsModal) {
+        termsModal.classList.add('active');
+        lockScroll();
+    }
+}
+
+function closeTerms() {
+    if (termsModal) termsModal.classList.remove('active');
+    unlockScroll();
+}
+
+if (termsLink) {
+    termsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        openTerms();
+    });
+}
+
+if (termsClose) termsClose.addEventListener('click', closeTerms);
+if (termsAccept) termsAccept.addEventListener('click', closeTerms);
+
+if (termsModal) {
+    termsModal.addEventListener('click', (e) => {
+        if (e.target === termsModal) closeTerms();
+    });
+}
 
 // Phone number formatting
 document.querySelectorAll('input[type="tel"]').forEach(input => {
@@ -450,11 +493,11 @@ if ('serviceWorker' in navigator) {
 
 // Online/Offline detection
 window.addEventListener('online', () => {
-    showNotification('You are back online!', 'success');
+    showNotification(tr('notif.online'), 'success');
 });
 
 window.addEventListener('offline', () => {
-    showNotification('You are offline. Some features may be limited.', 'warning');
+    showNotification(tr('notif.offline'), 'warning');
 });
 
 // Notification system
@@ -738,17 +781,19 @@ function renderCalendar() {
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const today = new Date();
     const todayStr = today.toDateString();
+    const mn = (window.I18N) ? I18N.t('cal.m' + (month + 1)) : monthNames[month];
+    const dn = (i) => (window.I18N) ? I18N.t('cal.d' + i) : dayNames[i];
     
     let html = `
         <div class="calendar-header">
             <button class="cal-nav" data-nav="-1"><i class="fas fa-chevron-left"></i></button>
-            <span class="cal-month">${monthNames[month]} ${year}</span>
+            <span class="cal-month">${mn} ${year}</span>
             <button class="cal-nav" data-nav="1"><i class="fas fa-chevron-right"></i></button>
         </div>
         <div class="cal-grid">
     `;
     
-    dayNames.forEach(d => { html += `<span class="cal-weekday">${d}</span>`; });
+    dayNames.forEach((d, i) => { html += `<span class="cal-weekday">${dn(i)}</span>`; });
     
     // Empty cells for first day
     for (let i = 0; i < firstDay; i++) {
@@ -816,7 +861,7 @@ function renderCalendar() {
                 if (checkout) {
                     checkout.value = `${nextDay.getFullYear()}-${String(nextDay.getMonth() + 1).padStart(2, '0')}-${String(nextDay.getDate()).padStart(2, '0')}`;
                 }
-                showNotification('Date selected! Check-in set to ' + `${day}-${String(Number(month) + 1).padStart(2, '0')}-${year}`, 'success');
+                showNotification(tr('notif.slotSelected', { date: `${day}-${String(Number(month) + 1).padStart(2, '0')}-${year}` }), 'success');
             }
         });
     });
@@ -829,7 +874,7 @@ document.querySelectorAll('.status-tab').forEach(tab => {
     tab.addEventListener('click', () => {
         document.querySelectorAll('.status-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        showNotification(`Showing ${tab.dataset.status} dates`, 'info');
+        showNotification(tr('notif.showing', { status: tr('cal.' + tab.dataset.status) }), 'info');
         // Re-render with different data could be added here
     });
 });
@@ -879,7 +924,7 @@ function appendMoreReviews() {
 
 function markReviewsLoaded() {
     if (loadMoreBtn) {
-        loadMoreBtn.innerHTML = '<i class="fas fa-check"></i> All reviews loaded';
+        loadMoreBtn.innerHTML = '<i class="fas fa-check"></i> ' + tr('rev.loaded');
         loadMoreBtn.disabled = true;
         loadMoreBtn.style.opacity = '0.5';
     }
@@ -920,12 +965,14 @@ document.querySelectorAll('.budget-select').forEach(btn => {
         updateEventCount();
 
         // Show the selected package in the events form
-        const pkgNames = { Veg: 'Veg Package (₹350/person)', 'Non-Veg': 'Non-Veg Package (₹500/person)', Premium: 'Premium Package (₹800/person)' };
+        const pkgKey = { Veg: 'pkg.vegName', 'Non-Veg': 'pkg.nonvegName', Premium: 'pkg.premName' }[pkg] || null;
+        const pkgPrice = { Veg: '₹350', 'Non-Veg': '₹500', Premium: '₹800' }[pkg] || '';
+        const pkgLabel = pkgKey ? tr(pkgKey) + ' (' + pkgPrice + tr('pkg.perPerson') + ')' : pkg;
         const selectedBanner = document.getElementById('selectedPackage');
         const selectedName = document.getElementById('selectedPackageName');
         const packageField = document.getElementById('packageField');
         if (selectedBanner && selectedName) {
-            selectedName.textContent = (pkgNames[pkg] || pkg) + ' selected';
+            selectedName.textContent = pkgLabel + ' ' + tr('pkg.selected');
             selectedBanner.style.display = 'flex';
         }
         if (packageField) packageField.value = pkg;
@@ -941,7 +988,7 @@ document.querySelectorAll('.budget-select').forEach(btn => {
             }
         }, 80);
 
-        showNotification(`${pkg} Package selected!`, 'success');
+        showNotification((pkgKey ? tr(pkgKey) : pkg) + ' ' + tr('pkg.selected') + '!', 'success');
     });
 });
 
@@ -1077,4 +1124,21 @@ if (prefersReducedMotion) {
 // Initialize gallery slide counter
 if (gallerySlides.length > 0) {
     goToSlide(0);
+}
+
+/* ============================= */
+/* Language Selection (i18n) */
+/* ============================= */
+if (window.I18N) {
+    I18N.init();
+    const langSelector = document.getElementById('langSelector');
+    if (langSelector) {
+        langSelector.addEventListener('change', () => {
+            I18N.apply(langSelector.value);
+        });
+        // Reflect current label even if page re-renders
+        document.addEventListener('i18n:changed', () => {
+            langSelector.value = I18N.current;
+        });
+    }
 }
