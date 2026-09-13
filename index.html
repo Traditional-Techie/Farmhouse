@@ -453,6 +453,20 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group">
+                                    <label data-i18n="extra.title">Extra Charges (if used)</label>
+                                    <p class="select-hint"><span data-i18n="extra.select">Select the options you will use</span></p>
+                                    <div class="extra-grid">
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Extra guest (above 10) - ₹500/person"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.guest">Extra guest (above 10)</span><span class="extra-rate">₹500<span class="extra-unit" data-i18n="extra.perPerson">/person</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Extra hour - ₹1,000/hour"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.hour">Extra hour</span><span class="extra-rate">₹1,000<span class="extra-unit" data-i18n="extra.perHour">/hour</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Extra room (stay-back) - ₹1,500/room"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.room">Extra room (stay-back)</span><span class="extra-rate">₹1,500<span class="extra-unit" data-i18n="extra.perRoom">/room</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="BBQ setup &amp; charcoal - ₹2,000/session"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.bbq">BBQ setup &amp; charcoal</span><span class="extra-rate">₹2,000<span class="extra-unit" data-i18n="extra.perSession">/session</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Pool cleaning (extra) - ₹800/use"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.pool">Pool cleaning (extra)</span><span class="extra-rate">₹800<span class="extra-unit" data-i18n="extra.perUse">/use</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Decor / photo setup - ₹3,000/setup"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.decor">Decor / photo setup</span><span class="extra-rate">₹3,000<span class="extra-unit" data-i18n="extra.perSetup">/setup</span></span></label>
+                                    </div>
+                                    <p class="extra-note" data-i18n="extra.note">Final amount depends on actual usage. Confirm with our team before your event.</p>
+                                </div>
+
                                 <button type="submit" class="btn btn-primary btn-block">
                                     <i class="fas fa-paper-plane"></i> <span data-i18n="form.submit">Submit Enquiry</span>
                                 </button>
@@ -466,51 +480,51 @@
                                 <span class="amenities-count" data-i18n="ame.count">+12 facilities</span>
                             </div>
                             <div class="amenities-grid">
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="pool" tabindex="0" role="button">
                                     <i class="fas fa-swimming-pool"></i>
                                     <span data-i18n="ame.pool">Swimming Pool</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="kitchen" tabindex="0" role="button">
                                     <i class="fas fa-utensils"></i>
                                     <span data-i18n="ame.kitchen">House Kitchen</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="bbq" tabindex="0" role="button">
                                     <i class="fas fa-fire"></i>
                                     <span data-i18n="ame.bbq">BBQ Area</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="garden" tabindex="0" role="button">
                                     <i class="fas fa-tree"></i>
                                     <span data-i18n="ame.garden">Lawn Garden</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="wifi" tabindex="0" role="button">
                                     <i class="fas fa-wifi"></i>
                                     <span data-i18n="ame.wifi">Free WiFi</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="parking" tabindex="0" role="button">
                                     <i class="fas fa-car"></i>
                                     <span data-i18n="ame.parking">Free Parking</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="ac" tabindex="0" role="button">
                                     <i class="fas fa-snowflake"></i>
                                     <span data-i18n="ame.ac">AC Rooms</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="tv" tabindex="0" role="button">
                                     <i class="fas fa-tv"></i>
                                     <span data-i18n="ame.tv">Smart TV</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="power" tabindex="0" role="button">
                                     <i class="fas fa-generator"></i>
                                     <span data-i18n="ame.power">Power Backup</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="kids" tabindex="0" role="button">
                                     <i class="fas fa-child"></i>
                                     <span data-i18n="ame.kids">Kids Play Area</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="firstaid" tabindex="0" role="button">
                                     <i class="fas fa-first-aid"></i>
                                     <span data-i18n="ame.firstaid">First Aid Kit</span>
                                 </div>
-                                <div class="amenity-item">
+                                <div class="amenity-item" data-amenity="security" tabindex="0" role="button">
                                     <i class="fas fa-shield-alt"></i>
                                     <span data-i18n="ame.security">24/7 Security</span>
                                 </div>
@@ -550,20 +564,7 @@
                             </ul>
                         </div>
 
-                        <!-- Extra Charges -->
-                        <div class="cancellation-policy extra-charges reveal">
-                            <h4 data-i18n="extra.title">Extra Charges (if used)</h4>
-                            <div class="extra-list">
-                                <div class="extra-row"><span data-i18n="extra.guest">Extra guest (above 10)</span><strong>₹500</strong><span class="extra-unit" data-i18n="extra.perPerson">/person</span></div>
-                                <div class="extra-row"><span data-i18n="extra.hour">Extra hour</span><strong>₹1,000</strong><span class="extra-unit" data-i18n="extra.perHour">/hour</span></div>
-                                <div class="extra-row"><span data-i18n="extra.room">Extra room (stay-back)</span><strong>₹1,500</strong><span class="extra-unit" data-i18n="extra.perRoom">/room</span></div>
-                                <div class="extra-row"><span data-i18n="extra.bbq">BBQ setup &amp; charcoal</span><strong>₹2,000</strong><span class="extra-unit" data-i18n="extra.perSession">/session</span></div>
-                                <div class="extra-row"><span data-i18n="extra.pool">Pool cleaning (extra)</span><strong>₹800</strong><span class="extra-unit" data-i18n="extra.perUse">/use</span></div>
-                                <div class="extra-row"><span data-i18n="extra.decor">Decor / photo setup</span><strong>₹3,000</strong><span class="extra-unit" data-i18n="extra.perSetup">/setup</span></div>
-                            </div>
-                            <p class="extra-note" data-i18n="extra.note">Final amount depends on actual usage. Confirm with our team before your event.</p>
                         </div>
-                    </div>
                 </div>
             </section>
 
@@ -764,6 +765,20 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group">
+                                    <label data-i18n="extra.title">Extra Charges (if used)</label>
+                                    <p class="select-hint"><span data-i18n="extra.select">Select the options you will use</span></p>
+                                    <div class="extra-grid">
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Extra guest (above 10) - ₹500/person"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.guest">Extra guest (above 10)</span><span class="extra-rate">₹500<span class="extra-unit" data-i18n="extra.perPerson">/person</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Extra hour - ₹1,000/hour"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.hour">Extra hour</span><span class="extra-rate">₹1,000<span class="extra-unit" data-i18n="extra.perHour">/hour</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Extra room (stay-back) - ₹1,500/room"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.room">Extra room (stay-back)</span><span class="extra-rate">₹1,500<span class="extra-unit" data-i18n="extra.perRoom">/room</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="BBQ setup &amp; charcoal - ₹2,000/session"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.bbq">BBQ setup &amp; charcoal</span><span class="extra-rate">₹2,000<span class="extra-unit" data-i18n="extra.perSession">/session</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Pool cleaning (extra) - ₹800/use"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.pool">Pool cleaning (extra)</span><span class="extra-rate">₹800<span class="extra-unit" data-i18n="extra.perUse">/use</span></span></label>
+                                        <label class="extra-item"><input type="checkbox" name="extras" value="Decor / photo setup - ₹3,000/setup"><span class="checkbox-custom"></span><span class="extra-label" data-i18n="extra.decor">Decor / photo setup</span><span class="extra-rate">₹3,000<span class="extra-unit" data-i18n="extra.perSetup">/setup</span></span></label>
+                                    </div>
+                                    <p class="extra-note" data-i18n="extra.note">Final amount depends on actual usage. Confirm with our team before your event.</p>
+                                </div>
+
                                 <button type="submit" class="btn btn-primary btn-block">
                                     <i class="fas fa-search"></i> <span data-i18n="ev.submit">Find my Perfect Experience</span>
                                 </button>
@@ -853,6 +868,21 @@
                 </div>
             </div>
             <button class="btn btn-primary" id="termsAccept"><span data-i18n="terms.accept">I Agree</span></button>
+        </div>
+    </div>
+
+    <!-- Amenity Detail Modal -->
+    <div class="modal amenity-modal" id="amenityModal">
+        <div class="modal-content amenity-content">
+            <button type="button" class="terms-close amenity-close" id="amenityClose" aria-label="Close"><i class="fas fa-times"></i></button>
+            <div class="amenity-hero">
+                <img id="amenityImage" src="images/pool.jpg" alt="">
+            </div>
+            <div class="amenity-info">
+                <h3 id="amenityTitle"></h3>
+                <p id="amenityDesc"></p>
+                <button class="btn btn-primary" id="amenityBook" data-i18n="hero.book">Book Now</button>
+            </div>
         </div>
     </div>
 

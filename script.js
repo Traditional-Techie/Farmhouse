@@ -299,6 +299,9 @@ function buildEnquiryMessage(form, type) {
         lines.push('Time Slot: ' + (labels[slot] || slot));
     }
 
+    const extras = fd.getAll('extras');
+    if (extras.length) lines.push('Extras Selected: ' + extras.join(', '));
+
     const file = fd.get('aadhar');
     if (file && file.name) lines.push('Aadhar uploaded: ' + file.name);
 
@@ -371,6 +374,9 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && termsModal && termsModal.classList.contains('active')) {
         closeTerms();
     }
+    if (e.key === 'Escape' && amenityModal && amenityModal.classList.contains('active')) {
+        closeAmenity();
+    }
 });
 
 // Terms & Conditions Modal
@@ -406,6 +412,87 @@ if (termsModal) {
         if (e.target === termsModal) closeTerms();
     });
 }
+
+// Amenity Detail Modal
+const amenityModal = document.getElementById('amenityModal');
+const amenityImage = document.getElementById('amenityImage');
+const amenityTitle = document.getElementById('amenityTitle');
+const amenityDesc = document.getElementById('amenityDesc');
+const amenityClose = document.getElementById('amenityClose');
+const amenityBook = document.getElementById('amenityBook');
+
+const AMENITY_IMAGES = {
+    pool: 'images/pool.jpg',
+    kitchen: 'images/kitchen.jpg',
+    bbq: 'images/bbq.jpg',
+    garden: 'images/garden.jpg',
+    wifi: 'images/living.jpg',
+    parking: 'images/exterior.jpg',
+    ac: 'images/bedroom.jpg',
+    tv: 'images/living.jpg',
+    power: 'images/exterior.jpg',
+    kids: 'images/garden.jpg',
+    firstaid: 'images/exterior.jpg',
+    security: 'images/exterior.jpg'
+};
+
+let activeAmenity = null;
+
+function fillAmenity(key) {
+    activeAmenity = key;
+    const img = AMENITY_IMAGES[key] || 'images/exterior.jpg';
+    if (amenityImage) {
+        amenityImage.src = img;
+        amenityImage.alt = tr('ame.' + key);
+    }
+    if (amenityTitle) amenityTitle.textContent = tr('ame.' + key);
+    if (amenityDesc) amenityDesc.textContent = tr('ame.d.' + key);
+}
+
+function openAmenity(key) {
+    fillAmenity(key);
+    if (amenityModal) {
+        amenityModal.classList.add('active');
+        lockScroll();
+    }
+}
+
+function closeAmenity() {
+    if (amenityModal) amenityModal.classList.remove('active');
+    unlockScroll();
+}
+
+document.querySelectorAll('.amenity-item').forEach(item => {
+    item.addEventListener('click', () => openAmenity(item.dataset.amenity));
+    item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openAmenity(item.dataset.amenity);
+        }
+    });
+});
+
+if (amenityClose) amenityClose.addEventListener('click', closeAmenity);
+
+if (amenityModal) {
+    amenityModal.addEventListener('click', (e) => {
+        if (e.target === amenityModal) closeAmenity();
+    });
+}
+
+if (amenityBook) {
+    amenityBook.addEventListener('click', () => {
+        closeAmenity();
+        switchTab('book-stay');
+    });
+}
+
+// Keep the open amenity modal localized when language changes
+document.addEventListener('i18n:changed', () => {
+    if (amenityModal && amenityModal.classList.contains('active') && activeAmenity) {
+        fillAmenity(activeAmenity);
+    }
+});
 
 // Phone number formatting
 document.querySelectorAll('input[type="tel"]').forEach(input => {
